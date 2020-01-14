@@ -1,6 +1,6 @@
 
   const measuresRouter = require('express').Router()
-  const Measure = require('../models/measure')
+  const Measure = require('../models/measure').default
 
   measuresRouter.get('/', async(request, response) => {
   const measure = await Measure.find({}).populate('measures', {
@@ -43,7 +43,7 @@ measuresRouter.put('/:id', async(request, response, next) => {
 
   try {
     //const updatedBlogLikes = await Measure.findOneAndUpdate(request.params.id,
-    /*const updatedBlogLikes = await Measure.update(request.params.id,
+    /*const updatedBlogLikes = await Measure.updateOne(request.params.id,
     { $push: { 
           graph: {
             point : body.point,
