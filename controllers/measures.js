@@ -1,6 +1,6 @@
 
   const measuresRouter = require('express').Router()
-  const Measure = require('../models/measure').default
+  const Measure = require('../models/measure')
 
   measuresRouter.get('/', async(request, response) => {
   const measure = await Measure.find({}).populate('measures', {
