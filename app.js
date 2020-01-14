@@ -7,7 +7,7 @@
   const usersRouter = require('./controllers/users')
   const loginRouter = require('./controllers/login')
   const middleware = require('./utils/middleware')
-  const cors = require('cors')
+  //const cors = require('cors')
   const logger = require('./utils/logger')
   const mongoose = require('mongoose')
 
