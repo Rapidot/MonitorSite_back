@@ -53,10 +53,10 @@ measuresRouter.put('/:id', async(request, response, next) => {
       },
       {safe: true, upsert: true}
     )*/
-    //Haetaan id:llä oikea mittaus
+    //Haetaan id:llä oikea mittaaja-array
     const data = await Measure.findOne(body.id)
-    //Jos mittauksia > 10
-    if (data.graph.length>10){
+    //Jos mittaajalla mittauksia > 9 eli 0..9 -> 10 kpl
+    if (data.graph.length>9){
       //etsitään vanhin
       const oldest = data.graph.reduce((c, n) => 
         Date.parse(n) < Date.parse(c) ? n : c)
