@@ -9,7 +9,7 @@ const mongoose = require('mongoose')
     graph: [
       {
         date: Date,
-        point: String
+        point: Number
       }
     ]
   })
