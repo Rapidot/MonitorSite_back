@@ -20,7 +20,7 @@
     "mixin-deep": "^2.0.1",
     "mongoose": "^5.8.7",
     "mongoose-unique-validator": "^2.0.3",
-    "set-value": "^3.0.1"
+    "set-value": "^4.0.1"
   },
   "devDependencies": {
     "cross-env": "^6.0.3",
